@@ -1,0 +1,35 @@
+using System;
+
+namespace EOverlap
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var a = new Derived();
+            int x = 123;
+            a.Foo(x);
+        }
+    }
+
+    public class Base
+    {
+        public virtual void Foo(int x)
+        {
+            Console.WriteLine("Base::Foo");
+        }
+    }
+
+    public class Derived : Base
+    {
+        public override void Foo(int x)
+        {
+            Console.WriteLine("Derived::Foo(int x)");
+        }
+
+        public void Foo(object o)
+        {
+            Console.WriteLine("Derived::Foo(object o)");
+        }
+    }
+}
