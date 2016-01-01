@@ -1,2 +1,2 @@
-# Example overlap C#
+# ExampleOverlap
 Интересный пример сокрытия кода
